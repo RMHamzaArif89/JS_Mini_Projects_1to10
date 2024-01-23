@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    
+        <div class="bg">
+            <img src="/images/img5.jpg" alt="">
+        </div>
+
+<div class="image_body">
+
+
+
+    <div class="images">
+
+        <div class="image1 img"><img src="/images/img2.jpg" alt=""></div>
+        <div class="image2 img"><img src="/images/img3.jpg" alt=""></div>
+        <div class="image3 img"><img src="/images/img4.jpg" alt=""></div>
+        <div class="image4 img"><img src="/images/img7.jpg" alt=""></div>
+        <div class="image5 img"><img src="/images/img1.jpg" alt=""></div>
+        <div class="image6 img"><img src="/images/img6.jpg" alt=""></div>
+
+    </div>
+
+
+
+
+        <div class="image_display">
+            <img src="/images/img1.jpg" class="image_active" alt="">
+        </div>
+        
+    <div class="con-2">
+        <div id="about"></div>
+        <div class="text">
+            <div class="con2-t">
+                About the Cafe
+            </div>
+        </div>
+
+
+        <div class="con2-t2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium provident quia aliquid delectus? Nulla
+            dignissimos sequi ducimus obcaecati quo possimus debitis, doloribus error cupiditate architecto tempora
+            cumque hic fugiat aut eos. Commodi, placeat! Quibusdam, error!
+            <br> <br>
+            dignissimos sequi ducimus obcaecati quo possimus debitis, doloribus error cupiditate architecto tempora
+            cumque hic fugiat aut eos. Commodi, placeat! Quibusdam, error!
+        </div>
+
+
+
+        <div class="con2-t3">
+            <p class="text3"> "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit officia dolore
+                fugit."<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+
+
+    <!-- <div class="con2-img"></div> -->
+
+
+
+        <div class="t4" style="margin: 2%;">
+            <span style="font-size: 1.4rem; color:black; font-weight:bold;">Opening Hours: </span>
+            <span style="font-size: 1.2rem; color:grey;"> Everyday from 6am to 6pm</span>
+        </div>
+        <div class="t4" style="margin: 2%;">
+            <span style="font-size: 1.4rem; color:black; font-weight:bold;">Address: </span>
+            <span style="font-size: 1.2rem; color:grey;">15 Adr Street, 5014, Fsd</span>
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+
+
+    <script>
+        imgs=document.querySelectorAll('.img')
+        imgs.forEach(function(eve){
+            eve.addEventListener('click',function(){
+                console.log(eve.children[0].src)
+                document.querySelector('.image_active').src=eve.children[0].src
+                
+            })
+            //console.log(this)
+            
+        })
+
+    </script>
+</body>
+
+</html>

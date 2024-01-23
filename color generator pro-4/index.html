@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: pink;
+        }
+        .btn{
+            width: 120px;
+            height: 60px;
+            background: rgba(73, 5, 5, 0.884);
+            border: 2px solid red;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">click</button>
+    </div>
+
+
+    <script>
+        body=document.querySelector('body')
+        btn = document.querySelector('.btn')
+       
+       
+       
+       //color generator using simple array method
+       // let color= ['red','yellow','green','black','pink','tan','orange','black','darkgray','brown','blue','darkorchid','blueviolet','crimson','coral','chocolate','chartreuse']
+           
+
+        //btn.addEventListener('click',function fun() {
+          //  colorindex=parseInt(Math.random()*color.length)
+            //body.style.backgroundColor=color[colorindex]
+            //colorindex=parseInt(Math.random()*color.length)
+            //btn.style.backgroundColor=color[colorindex]
+       // })
+
+
+
+//color generator using loop and array method
+       const hexaDecimal = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+       
+
+
+   
+       
+    btn.addEventListener('click',function(){
+        let  hexaColor='#'
+        let  hexaColor2='#'
+        for(i=0;i<6;i++){
+            hexaColor+=hexaDecimal[getRandomNumber()]
+        }
+        for(i=0;i<6;i++){
+            hexaColor2+=hexaDecimal[getRandomNumber()]
+        }
+        //console.log(hexaColor)
+        document.body.style.backgroundColor=hexaColor
+        btn.style.backgroundColor=hexaColor2
+       
+    })
+    
+
+
+
+    function getRandomNumber(){
+        return Math.floor(Math.random()*hexaDecimal.length);
+        //console.log(Math.floor(Math.random()*hexaDecimal.length))
+        
+    }
+
+        
+    </script>
+</body>
+</html>

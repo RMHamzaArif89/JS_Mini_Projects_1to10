@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div.con{
+            background: green;
+            height: 640px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calculator {
+
+            height: 450px;
+            width: 400px;
+            -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .cal-screen {
+            height: 20%;
+            width: 100%;
+        
+
+        }
+
+        .cal-btn {
+            background: rgb(73, 73, 73);
+            height: 80%;
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        button {
+            width: 20%;
+            height: 15%;
+            margin: 2%;
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            padding: 4px 6px;
+            cursor: pointer;
+            border: 1px solid gray;
+            transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+
+        }
+        .btn:hover{
+            background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+        }
+
+        .btn-first{
+            background: rgb(206, 136, 8);
+        }
+        .btn-second{
+            background: rgb(52, 5, 128);
+        }
+        .btn-third{
+            background: rgb(150, 6, 6);
+        }
+
+       .cal-screen input{
+            width: 100%;
+            height: 100%;
+            background: white;
+            border: 1px solid gray;
+            color: rgba(95, 94, 94, 0.938);
+            font-size: 30px;
+            font-weight: bold;
+            text-align: right;
+            border-radius: 3px;
+
+        }
+
+        .btn-equal{
+            width: 96%;
+            background: rgba(28, 28, 228, 0.938);
+        }
+        .btn-equal:hover{
+            background: greenyellow;
+        }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .dis{
+            width: 100%;
+            height: 100px;
+            background: white;
+            text-align: center;
+            font-size: 3rem;
+            font-family: monospace;
+            position: relative;
+            bottom: 0;
+            padding: 20px 0px;
+        
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+/* small mobile and divices */
+
+@media (min-width:220px) and (max-width: 600px) {
+    html{
+    font-size:10px;
+    
+    }
+
+    
+    
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media (max-width:768px) and (min-width:600px) {
+    html{
+        font-size: 12px;
+    }
+
+
+
+    
+    }
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media(max-width:992px) and (min-width:768px){
+    html{
+        font-size: 14px;
+    }
+  
+    
+    
+    }
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) and (max-width:1200px){
+    html{
+        font-size: 16px;
+    
+        
+    }
+   
+    
+    
+    }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+    
+    }
+    
+
+    </style>
+</head>
+
+<body>
+
+   <div class="con">
+    <div class="calculator">
+
+        <div class="cal-screen">
+        
+                <input type="text" class="screen" placeholder="Enter value">
+        
+        </div>
+
+
+        <div class="cal-btn">
+            <button type="button" class="btn btn-first">*</button>
+            <button type="button" class="btn btn-first">/</button>
+            <button type="button" class="btn btn-first">-</button>
+            <button type="button" class="btn btn-first">+</button>
+
+            <button type="button" class="btn btn-second">9</button>
+            <button type="button" class="btn btn-second">8</button>
+            <button type="button" class="btn btn-second">7</button>
+            <button type="button" class="btn btn-second">6</button>
+            <button type="button" class="btn btn-second">5</button>
+            <button type="button" class="btn btn-second">4</button>
+            <button type="button" class="btn btn-second">3</button>
+            <button type="button" class="btn btn-second">2</button>
+            <button type="button" class="btn btn-second">1</button>
+            <button type="button" class="btn btn-second">0</button>
+
+            <button type="button" class="btn btn-third btn-dot">.</button>
+            <button type="button" class=" btn-third btn-clear">C</button>
+            <button type="button" class="btn btn-log">log</button>
+            <button type="button" class="btn btn-log">(</button>
+            <button type="button" class="btn btn-log">)</button>
+            <button type="button" class="btn btn-log">%</button>
+            <button type="button" class=" btn-third btn-equal">=</button>
+           
+
+
+        </div>
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="dis">
+<span>Your Result:</span>
+<span id="display"></span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let screen=document.querySelector('.screen')
+ let btns=document.querySelectorAll('.btn')
+ let equal=document.querySelector('.btn-equal')
+ let clear=document.querySelector('.btn-clear')
+ let display=document.querySelector('#display')
+
+btns.forEach(function(button){
+    button.addEventListener('click',function(){
+        value=button.innerText;
+        screen.value+=value;
+
+
+    })
+})
+equal.addEventListener('click',function(){
+    if(screen.value===''){
+        display.innerText="please enter the value"
+    }
+    else{
+        answer=eval(screen.value)
+        display.innerText=answer;
+    }
+})
+clear.addEventListener('click',function(){
+    screen.value=' '
+})
+
+  
+        
+    </script>
+</body>
+
+</html>
+<!--         error=document.querySelectorAll('btn-first')
+   screen = document.querySelector('.screen')
+   button = document.querySelectorAll('.btn')
+   equal = document.querySelector('.btn-equal')
+   clear = document.querySelector('.btn-clear')
+
+  button.forEach(function(button) {
+   button.addEventListener('click',function(f){
+    let value = button.innerText;
+    screen.value +=value;
+   })
+    
+} 
+    
+);
+
+
+//equal btnn
+   equal.addEventListener('click',function (f) {
+    if(screen.value===''){
+      screen.value='please enter value';
+   
+      
+    }
+ 
+    else{
+        let ans = eval(screen.value)
+        screen.value = ans;
+        
+   
+    }
+      
+    }
+   )
+
+   //clear btn
+   clear.addEventListener('click',function (f){
+    screen.value='';
+   })
+
+
+
+
+
+   
+   display=document.querySelector('#display')
+    
+    
+   equal.addEventListener('click',function func() {
+    display.innerText=screen.value;
+    
+   })
+
+
+
+   clear.addEventListener('click',function func2() {
+    display.innerText=" ";
+    
+   }) -->

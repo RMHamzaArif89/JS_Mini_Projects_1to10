@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 30%;
+            width: 35%;
+            background: rgb(255, 255, 255);
+            opacity: 1.2; 
+            box-shadow: 50px;
+            border-radius: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .heading{
+            font-size: 30px;
+            font-weight: 800;
+            color: black;
+            text-transform: uppercase;
+        }
+        button{
+            background:lightblue;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 600;
+            width: 80px;
+            height: 40px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            margin: 0 3%;
+            cursor: pointer;
+        }
+        button:hover{
+            background:rgb(147, 200, 218);
+            border: 1px solid green;
+        }
+
+
+
+    .display{
+        font-size: 4rem;
+        font-weight: bold;
+        font-family: sans-serif;
+        height: 80px;
+        width: 100px;
+        border-radius: 6px;
+   position: relative;
+   left: 35%;
+   text-align: center;
+
+   padding: 5px 0px;
+
+       
+    }
+  
+
+    /* small mobile and divices */
+
+@media (min-width:220px) and (max-width: 600px) {
+    html{
+    font-size:8px;
+    
+    }
+    .container{
+        width: 75%;
+        height: 40%;
+    }
+    
+
+    
+    
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media (max-width:768px) and (min-width:600px) {
+    html{
+        font-size: 10px;
+    }
+    .container{
+        width: 60%;
+        height: 40%;
+    }
+
+
+
+    
+    }
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media(max-width:992px) and (min-width:768px){
+    html{
+        font-size: 12px;
+    }
+    .container{
+        width: 45%;
+        height: 40%;
+    }
+  
+    
+    
+    }
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) and (max-width:1200px){
+    html{
+        font-size: 14px;
+    
+        
+    }
+    .container{
+        width: 40%;
+        height: 35%;
+    }
+   
+    
+    
+    }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+    .container{
+        width: 35%;
+        height: 35%;
+    }
+    }
+    
+    
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="counter">
+
+            <h1 class="heading">javascript counter</h1>
+
+            <div class="display" id="display"></div>
+
+            <button class=" btn min">Min</button>
+            <button class=" btn reset">Reset</button>
+            <button class=" btn max">Max</button>
+          
+
+        </div>
+
+    </div>
+
+<script>
+    display=document.querySelector('#display')
+    min=document.querySelector('.min')
+    max=document.querySelector('.max')
+    reset=document.querySelector('.reset')
+    let count=0;
+    display.innerText=count;
+
+    min.addEventListener('click',function func() {
+        count--;
+       
+        display.innerText=count;
+        if(count<0){
+            display.style.color='red'
+        }
+
+    })
+    max.addEventListener('click',function func() {
+        count++;
+        
+        display.innerText=count;
+        if(count>0){
+            display.style.color='green'
+        }
+        
+    })
+
+    reset.addEventListener('click',function func() {
+        count=0;
+        
+        display.innerText=count;
+        if(count==0){
+            display.style.color='gray'
+        }
+        
+    })
+    
+   
+
+</script>
+
+    
+</body>
+</html>

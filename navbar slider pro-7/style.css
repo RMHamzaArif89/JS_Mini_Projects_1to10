@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgba(247, 198, 206, 0.952);
+}
+
+
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    background: lightblue;
+
+}
+
+.nav-t {
+    width: 180px;
+    height: 60px;
+    padding: 8px 2px;
+    float: left;
+    margin: 10px;
+    font-size: 1.5rem;
+    font-family: serif;
+    color: darkslateblue;
+    text-align: center;
+    line-height: 1.8;
+}
+
+
+.nav-tog {
+    float: right;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    padding: 6px 14px;
+    margin: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-tog a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    padding: 6px 14px;
+    margin: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+
+.nav-tog a:hover {
+    background: #928f8f86;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-side {
+    width: 250px;
+    height: 755px;
+    z-index: 5;
+    
+    position: fixed;
+    background: rgba(5, 139, 133, 0.911);
+    
+    animation: slide 0.8s;
+    animation-delay: 0s;
+    display: none;
+
+}
+
+@keyframes slide {
+    0% {
+        left: -250px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+
+.nav-text {
+
+
+    color: rgba(255, 255, 255, 0.952);
+    font-size: bold;
+    font-family: monospace;
+    font-size: 1.5rem;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+
+
+
+.list {
+    margin-top: 5%;
+}
+
+.list li {
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    height: 30px;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(253, 252, 252, 0.938);
+    font-size: bold;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.list li:hover {
+    background: #949393bb;
+
+}
+
+.close{
+    font-weight: bold;
+    background: #49494962;
+}
+
+
+
+
+
+@media  screen and (min-width:400px) and (max-width:860px) {
+
+   
+.nav-side {
+    width: 100%;
+    height: 350px;
+    z-index: 5;
+    top: 0px;
+    position: fixed;
+    background: rgba(5, 139, 133, 0.911);
+    
+    animation: slide 0.8s;
+    animation-delay: 0s;
+    display: none;
+
+}
+
+@keyframes slide {
+    0% {
+        top: -350px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0%;
+        opacity: 1;
+    }
+}
+}
